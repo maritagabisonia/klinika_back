@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "hBObMyboGSt+tebWpuO2wSfpcbbfIkiV0R4InCE0HD4=",
+  "Source": "hospital",
+  "BasePath": "_content/hospital",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "hospital\\wwwroot",
+      "Source": "hospital",
+      "ContentRoot": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\",
+      "BasePath": "_content/hospital",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\Uploads\\a1a3c24f-356e-4d82-9ede-e6ae7ce4eb1e.jpeg",
+      "SourceId": "hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\",
+      "BasePath": "_content/hospital",
+      "RelativePath": "Uploads/a1a3c24f-356e-4d82-9ede-e6ae7ce4eb1e.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\a1a3c24f-356e-4d82-9ede-e6ae7ce4eb1e.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\Uploads\\cbd03117-41e0-49bc-ad38-55c96751157f.jpeg",
+      "SourceId": "hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\",
+      "BasePath": "_content/hospital",
+      "RelativePath": "Uploads/cbd03117-41e0-49bc-ad38-55c96751157f.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\cbd03117-41e0-49bc-ad38-55c96751157f.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\Uploads\\ccb6405a-1310-458b-b6d7-86ca1c68f1e6.jpeg",
+      "SourceId": "hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\wwwroot\\",
+      "BasePath": "_content/hospital",
+      "RelativePath": "Uploads/ccb6405a-1310-458b-b6d7-86ca1c68f1e6.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\ccb6405a-1310-458b-b6d7-86ca1c68f1e6.jpeg"
+    }
+  ]
+}
