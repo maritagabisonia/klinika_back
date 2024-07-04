@@ -6226,11 +6226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\hospital.csproj",
+      "projectUniqueName": "C:\\Users\\marita.gabisonia\\Desktop\\hospital\\hospital\\hospital.csproj",
       "projectName": "hospital",
-      "projectPath": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\hospital.csproj",
+      "projectPath": "C:\\Users\\marita.gabisonia\\Desktop\\hospital\\hospital\\hospital.csproj",
       "packagesPath": "C:\\Users\\marita.gabisonia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\obj\\",
+      "outputPath": "C:\\Users\\marita.gabisonia\\Desktop\\hospital\\hospital\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marita.gabisonia\\AppData\\Roaming\\NuGet\\NuGet.Config",

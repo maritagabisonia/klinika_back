@@ -30,6 +30,7 @@ namespace hospital.packages
         public List<Category> get_categories_eng();
         public List<Category> get_categories_geo();
         public List<CategoryDbo> get_categories();
+        public List<Translate> translate(string language);
 
 
 
@@ -524,52 +525,6 @@ namespace hospital.packages
             return doctors;
 
         }
-
-
-
-        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        {
-            using (var hmac = new HMACSHA512())
-            {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-            }
-        }
-        private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
-        {
-            using (var hmac = new HMACSHA512(passwordSalt))
-            {
-                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                return computedHash.SequenceEqual(passwordHash);
-            }
-        }
-
-        private byte[] GetFileBytes(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-                return null;
-
-            using (var memoryStream = new MemoryStream())
-            {
-                file.CopyTo(memoryStream);
-                return memoryStream.ToArray();
-
-
-            }
-        }
-        private byte[] GetBytesFromOracleBlob(OracleDataReader reader, string columnName)
-        {
-            var blob = reader.GetOracleBlob(reader.GetOrdinal(columnName));
-            if (blob == null || blob.IsNull)
-            {
-                return null;
-            }
-
-            byte[] buffer = new byte[blob.Length];
-            blob.Read(buffer, 0, buffer.Length);
-            return buffer;
-        }
-
         public List<Category> get_categories_eng()
         {
             OracleConnection conn = new OracleConnection();
@@ -665,8 +620,82 @@ namespace hospital.packages
             return categories;
 
         }
+        public List<Translate> translate(string language)
+        {
+            OracleConnection conn = new OracleConnection();
+            conn.ConnectionString = Connstr;
+            List<Translate> translations = new List<Translate>();
+
+            conn.Open();
+            OracleCommand cmd = conn.CreateCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "olerning. pkg_marita_translate.translate";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("p_language", OracleDbType.Varchar2).Value = language;
+            cmd.Parameters.Add("p_curse", OracleDbType.RefCursor).Direction= ParameterDirection.Output;
+            OracleDataReader reader = cmd.ExecuteReader();  
+            while (reader.Read())
+            {
+                Translate translate = new Translate();
+                translate.Code = reader["code"].ToString();
+                translate.Word = reader["Word"].ToString();
+
+                translations.Add(translate);
+            }
+            return translations;
+
+
+        }
+
+
+        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        {
+            using (var hmac = new HMACSHA512())
+            {
+                passwordSalt = hmac.Key;
+                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+            }
+        }
+        private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
+        {
+            using (var hmac = new HMACSHA512(passwordSalt))
+            {
+                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                return computedHash.SequenceEqual(passwordHash);
+            }
+        }
+
+        private byte[] GetFileBytes(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return null;
+
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                return memoryStream.ToArray();
+
+
+            }
+        }
+        private byte[] GetBytesFromOracleBlob(OracleDataReader reader, string columnName)
+        {
+            var blob = reader.GetOracleBlob(reader.GetOrdinal(columnName));
+            if (blob == null || blob.IsNull)
+            {
+                return null;
+            }
+
+            byte[] buffer = new byte[blob.Length];
+            blob.Read(buffer, 0, buffer.Length);
+            return buffer;
+        }
+
+   
+
     }
 
 
-    
+
 }

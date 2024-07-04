@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3LTnxOvFP7WgdhgUE7kmWCEABJLXGX2b6gb2Nn7FMQmsn4pSNsII93LoDtppsefP5zLzQLkyvJEOprNXPyn7NA==",
+  "dgSpecHash": "P25XrPPsQlh3JljIdsW+qdmhfPtd2vXCVdAJBwT0/hTHcwv+Twy1OAOqcPJsYga2CsL7uf2celbffc/nVF32Ew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marita.gabisonia\\source\\repos\\hospital\\hospital\\hospital.csproj",
+  "projectFilePath": "C:\\Users\\marita.gabisonia\\Desktop\\hospital\\hospital\\hospital.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marita.gabisonia\\.nuget\\packages\\mailjet.api\\3.0.0\\mailjet.api.3.0.0.nupkg.sha512",
     "C:\\Users\\marita.gabisonia\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
