@@ -238,6 +238,13 @@ namespace hospital.Controllers
             return Ok(_package.get_categories_eng());
 
         }
+        [HttpGet("translate")]
+        public IActionResult Translate(string language)
+        {
+            return Ok(_package.translate(language));
+
+        }
+
 
 
 

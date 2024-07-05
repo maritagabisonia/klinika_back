@@ -639,7 +639,7 @@ namespace hospital.packages
             {
                 Translate translate = new Translate();
                 translate.Code = reader["code"].ToString();
-                translate.Word = reader["Word"].ToString();
+                translate.Word = reader["word"].ToString();
 
                 translations.Add(translate);
             }
