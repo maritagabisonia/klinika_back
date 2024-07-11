@@ -28,10 +28,11 @@ namespace hospital.Controllers
             _tokenService = tokenService;
             _fileService = fileService ?? throw new ArgumentNullException(nameof(fileService));
         }
+  
 
 
         [HttpPost("register_user")]
-        public async Task<IActionResult> Register_user([FromForm]RegisterUser user)
+        public async Task<IActionResult> Register_user([FromForm] RegisterUser user)
         {
             string[] allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".txt" };
 
@@ -67,20 +68,9 @@ namespace hospital.Controllers
 
             return Ok(new
             {
-                token,
-                user = new
-                {
-                    loggedInUser.Id,
-                    loggedInUser.FirstName,
-                    loggedInUser.LastName,
-                    loggedInUser.Email,
-                    loggedInUser.Personalid,
-                    loggedInUser.Profession,
-                    loggedInUser.Photo,
-                    loggedInUser.CV,
-                    loggedInUser.Roleid,
-                    loggedInUser.Role
-                }
+                token, loggedInUser.Id,
+            
+                
             });
 
         }
